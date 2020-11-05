@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Watching</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+</head>
+<body>
+<header class="modal-header">
+    <a href="#">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="YouTube Logo" class="youtube-logo"/>
+    </a>
+    <form class="search-bar">
+        <input class="search-input" type="search" placeholder="Search" aria-label="Search"/>
+        <button type="submit" class="search-btn">
+            <img src="{{ url_for('static', filename='magnify.svg') }}"/>
+        </button>
+    </form>
+</header>
+<div class="container" id="video-stream-view">
+
+</div>
+
+
+<div class="wrapper">
+    <header>
+        <div class="header__logo">
+            <a href="#">
+                <img src="{{ url_for('static', filename='/hamburger.png') }}" alt="navigation button" class="header__hamburger-logo">
+            </a>
+            <a href="#">
+                <img src="{{ url_for('static', filename='/yt-logo.png') }}" alt="YouTube" class="header__yt-logo">
+            </a>
+        </div>
+        <div class="search">
+            <form>
+                <input type="text" name="search" id="search__input" placeholder="Search">
+                <a href="#">
+                    <img src="{{ url_for('static', filename='/search.png') }}" alt="Search Icon" class="search__icon">
+                </a>
+            </form>
+        </div>
+        <div class="header__icons header__logo">
+            <a href="#">
+                <img src="{{ url_for('static', filename='/grid.png') }}" alt="grid icon" class="header__icons--grid">
+            </a>
+            <a href="#">
+                <img src="{{ url_for('static', filename='/upload.png') }}" alt="grid icon" class="header__icons--upload">
+            </a>
+            <a href="#">
+                <img src="{{ url_for('static', filename='/bell.png') }}" alt="grid icon" class="header__icons--bell">
+            </a>
+            <a href="#">
+                <img src="{{ url_for('static', filename='/profile-placeholder.png') }}" alt="grid icon" class="header__icons--profile">
+            </a>
+        </div>
+    </header>
+    <div class="main-wrapper">
+        <div class="left"></div>
+        <main>
+            <div class="main__video">
+                <div class="main__video-container">
+                    <video width="480px" height="360px" controls>
+                        <source src={{data}}
+                                type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="main__description">
+                    <p>Steph Curry & DeMarcus Postgame Interview - Game 2 | Warriors vs Raptos | 2019 NBA Finals</p>
+                    <p>290,399 views</p>
+                    <a href="#">
+                        <img src="{{ url_for('static', filename='/describe-icons.png') }}" alt="describe-icons">
+                    </a>
+                </div>
+                <div class="main__sub-description">
+                    <a href="#">
+                        <img class="main__name" src="{{ url_for('static', filename='/describe-name.png') }}" alt="name">
+                    </a>
+                    <a href="#">
+                        <img class="main__subscriptions" src="{{ url_for('static', filename='/subscribed.jpg') }}" alt="subscriptions">
+                    </a>
+                    <p>Stephen A. Smith gives his best sales pitch for Kevin Durant to sign with the New York Knicks
+                        ahead of 2019 NBA free agency, saying KD would get whatever he desired courtesy of James
+                        Dolan..</p>
+                </div>
+                <div class="main__more">
+                    <a href="#">
+                        <p>SHOW MORE</p>
+                    </a>
+                </div>
+            </div>
+            <aside class="aside">
+                <div class="aside__top-container">
+                    <p>Up next</p>
+                    <a href="#">AUTOPLAY</a>
+                </div>
+                <a href="#" class="first-img-aside">
+                    <img src="{{ url_for('static', filename='/aside-pic.jpg') }}" alt="Next video">
+                </a>
+                <a href="#">
+                    <img class="aside__video" src="{{ url_for('static', filename='/aside-pic.jpg') }}" alt="Next video">
+                </a>
+                <a href="#">
+                    <img class="aside__video" src="{{ url_for('static', filename='/aside-pic.jpg') }}" alt="Next video">
+                </a>
+                <a href="#">
+                    <img class="aside__video" src="{{ url_for('static', filename='/aside-pic.jpg') }}" alt="Next video">
+                </a>
+                <a href="#">
+                    <img class="aside__video" src="{{ url_for('static', filename='/aside-pic.jpg') }}" alt="Next video">
+                </a>
+                <a href="#">
+                    <img class="aside__video" src="{{ url_for('static', filename='/aside-pic.jpg') }}" alt="Next video">
+                </a>
+                <a href="#">
+                    <img class="aside__video" src="{{ url_for('static', filename='/aside-pic.jpg') }}" alt="Next video">
+                </a>
+                <a href="#">
+                    <img class="aside__video" src="{{ url_for('static', filename='/aside-pic.jpg') }}" alt="Next video">
+                </a>
+                <a href="#">
+                    <img class="aside__video" src="{{ url_for('static', filename='/aside-pic.jpg') }}" alt="Next video">
+                </a>
+                <a href="#">
+                    <img class="aside__video" src="{{ url_for('static', filename='/aside-pic.jpg') }}" alt="Next video">
+                </a>
+                <a href="#">
+                    <img class="aside__video" src="{{ url_for('static', filename='/aside-pic.jpg') }}" alt="Next video">
+                </a>
+                <a href="#">
+                    <img class="aside__video" src="{{ url_for('static', filename='/aside-pic.jpg') }}" alt="Next video">
+                </a>
+                <a href="#">
+                    <img class="aside__video" src="{{ url_for('static', filename='/aside-pic.jpg') }}" alt="Next video">
+                </a>
+                <div class="aside__more">
+                    <a href="#">SHOW MORE</a>
+                </div>
+            </aside>
+
+            <section>
+                <div>
+                    <div class="section__comments">
+                        <p>6,806 Comments</p>
+                    </div>
+                    <div class="section__sort-container">
+                        <a href="#">
+                            <img src="{{ url_for('static', filename='/sort.jpg') }}" alt="sort comments">
+                            <p>SORT BY</p>
+                        </a>
+                    </div>
+                    <div class="section__profile">
+                        <img src="{{ url_for('static', filename='/profile_icon.png') }}" alt="profile_icon">
+                    </div>
+                    <div class="input__container">
+                        <form>
+                            <input type="text" name="comment" id="comment" value="Add a public comment...">
+                        </form>
+                    </div>
+                </div>
+                <div>
+                    <div class="comments">
+                        <img src="images/profile_icon.png" alt="profile icon" width="50">
+                        <p class="comments__name">John Snow <a href="#">10 months ago</a></p>
+                        <p class="comments__comment">Stephen A will do anything he possibly can to get KD on the Knicks
+                            😂.</p>
+                        <div class="likes">
+                            <a href="#">
+                                <img src="{{ url_for('static', filename='/like.jpg') }}" alt="like">
+                            </a>
+                            <p class="comments__text">1K</p>
+                            <a href="#">
+                                <img src="{{ url_for('static', filename='/dislike.jpg') }}" alt="dislike">
+                            </a>
+                            <a href="#" class="comments__text">REPLY</a>
+                        </div>
+                        <a href="#" class="comments_replies">View all 7 replies</a>
+                    </div>
+                    <div class="comments">
+                        <img src="images/profile_icon.png" alt="profile icon" width="50">
+                        <p class="comments__name">Arya Stark <a href="#">10 months ago</a></p>
+                        <p class="comments__comment">Stephen A will do anything he possibly can to get KD on the Knicks
+                            😂.</p>
+                        <div class="likes">
+                            <a href="#">
+                                <img src="images/like.jpg" alt="like">
+                            </a>
+                            <p class="comments__text">1K</p>
+                            <a href="#">
+                                <img src="images/dislike.jpg" alt="dislike">
+                            </a>
+                            <a href="#" class="comments__text">REPLY</a>
+                        </div>
+                        <a href="#" class="comments_replies">View all 7 replies</a>
+                    </div>
+                    <div class="comments">
+                        <img src="images/profile_icon.png" alt="profile icon" width="50">
+                        <p class="comments__name">Tyrion Lannister <a href="#">10 months ago</a></p>
+                        <p class="comments__comment">Stephen A will do anything he possibly can to get KD on the Knicks
+                            😂.</p>
+                        <div class="likes">
+                            <a href="#">
+                                <img src="images/like.jpg" alt="like">
+                            </a>
+                            <p class="comments__text">1K</p>
+                            <a href="#">
+                                <img src="images/dislike.jpg" alt="dislike">
+                            </a>
+                            <a href="#" class="comments__text">REPLY</a>
+                        </div>
+                        <a href="#" class="comments_replies">View all 7 replies</a>
+                    </div>
+                    <div class="comments">
+                        <img src="images/profile_icon.png" alt="profile icon" width="50">
+                        <p class="comments__name">Mark Snow <a href="#">10 months ago</a></p>
+                        <p class="comments__comment">Stephen A will do anything he possibly can to get KD on the Knicks
+                            😂.</p>
+                        <div class="likes">
+                            <a href="#">
+                                <img src="images/like.jpg" alt="like">
+                            </a>
+                            <p class="comments__text">1K</p>
+                            <a href="#">
+                                <img src="images/dislike.jpg" alt="dislike">
+                            </a>
+                            <a href="#" class="comments__text">REPLY</a>
+                        </div>
+                        <a href="#" class="comments_replies">View all 7 replies</a>
+                    </div>
+                    <div class="comments">
+                        <img src="images/profile_icon.png" alt="profile icon" width="50">
+                        <p class="comments__name">Lord Varys <a href="#">10 months ago</a></p>
+                        <p class="comments__comment">Stephen A will do anything he possibly can to get KD on the Knicks
+                            😂.</p>
+                        <div class="likes">
+                            <a href="#">
+                                <img src="images/like.jpg" alt="like">
+                            </a>
+                            <p class="comments__text">1K</p>
+                            <a href="#">
+                                <img src="images/dislike.jpg" alt="dislike">
+                            </a>
+                            <a href="#" class="comments__text">REPLY</a>
+                        </div>
+                        <a href="#" class="comments_replies">View all 7 replies</a>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+    </div>
+</div>
+
+</body>
+</html>
